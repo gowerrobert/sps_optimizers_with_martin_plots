@@ -1642,14 +1642,15 @@ class PermDBeta:
 
     def __init__(self, d, beta=0.5):
         self.d = d
-        self.input_domain = np.array([[-d, d] for _ in range(d)])
+        self.input_domain = np.array([[-1.2*d, 1.2*d] for _ in range(d)])
         self.beta = beta
 
     def get_param(self):
         return {'beta': self.beta}
 
     def get_global_minimum(self, d):
-        X = np.array([1 / (i + 1) for i in range(d)])
+        X = np.array([ (i + 1) for i in range(d)])
+        # X = np.array([1 / (i + 1) for i in range(d)])
         return (X, self(X))
 
     def __call__(self, X):
