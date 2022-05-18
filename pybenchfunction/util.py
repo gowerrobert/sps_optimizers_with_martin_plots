@@ -35,7 +35,7 @@ def plot_2d(function, n_space=1000, cmap=cmap, XYZ=None, ax=None, show=True):
         ax = fig.add_subplot(1, 1, 1)
 
     # add contours and contours lines
-    # ax.contour(X, Y, Z, levels=30, linewidths=0.5, colors='#999')
+    # CS3 = ax.contour(X, Y, Z, levels=30, linewidths=0.5, colors='#999')
     CS3 = ax.contourf(X, Y, Z, levels=30, cmap=cmap, alpha=0.7)
     cbar = fig.colorbar(CS3)
     cbar.ax.set_ylabel('function value')
@@ -70,7 +70,7 @@ def plot_3d(function, n_space=1000, cmap=cmap, XYZ=None, ax=None, show=True):
     CS3 = ax.contour(X, Y, Z, zdir='z', levels=30, offset=np.min(Z), cmap=cmap)
     cbar = fig.colorbar(CS3)
     cbar.ax.set_ylabel('function value')
-    
+
     ax.xaxis.pane.fill = False
     ax.yaxis.pane.fill = False
     ax.zaxis.pane.fill = False

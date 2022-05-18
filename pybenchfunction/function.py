@@ -1426,7 +1426,8 @@ class LevyN13:
 
     def __init__(self, d):
         self.d = d
-        self.input_domain = np.array([[-10, 10], [-10, 10]])
+        self.input_domain = np.array([[0.5, 1.5], [0.5, 1.5]])
+        # self.input_domain = np.array([[-10, 10], [-10, 10]])
 
     def get_param(self):
         return {}
@@ -1794,7 +1795,8 @@ class Rastrigin:
 
     def __init__(self, d):
         self.d = d
-        self.input_domain = np.array([[-5.12, 5.12] for _ in range(d)])
+        self.input_domain = np.array([[-0.5, 0.5] for _ in range(d)])
+        # self.input_domain = np.array([[-5.12, 5.12] for _ in range(d)])
 
     def get_param(self):
         return {}
