@@ -41,8 +41,8 @@ def plot_2d(function, n_space=1000, cmap=cmap, XYZ=None, ax=None, show=True):
     cbar.ax.set_ylabel('function value')
 
     # add labels and set equal aspect ratio
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
+    ax.set_xlabel('X0')
+    ax.set_ylabel('X1')
     ax.set_aspect(aspect='equal')
     if show:
         plt.show()
@@ -74,8 +74,8 @@ def plot_3d(function, n_space=1000, cmap=cmap, XYZ=None, ax=None, show=True):
     ax.xaxis.pane.fill = False
     ax.yaxis.pane.fill = False
     ax.zaxis.pane.fill = False
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
+    ax.set_xlabel('X0')
+    ax.set_ylabel('X1')
     ax.xaxis.set_tick_params(labelsize=8)
     ax.yaxis.set_tick_params(labelsize=8)
     ax.zaxis.set_tick_params(labelsize=8)
